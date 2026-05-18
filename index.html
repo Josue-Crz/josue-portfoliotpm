@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta
+      name="description"
+      content="Product management and technical program management portfolio for Josue Cruz, Computer Science student at San Francisco State University."
+    >
+    <title>Josue Cruz | Technical Product Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="loader" data-loader aria-live="polite" aria-label="Loading portfolio">
+      <div class="loader__mark" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </div>
+      <p>Josue Cruz</p>
+      <div class="loader__bar" aria-hidden="true"><span></span></div>
+    </div>
+
+    <div class="site-shell">
+      <header class="site-header" aria-label="Primary">
+        <a class="brand" href="#home" data-tab-link="home" aria-label="Josue Cruz home">
+          <span class="brand__sig">JC</span>
+          <span>
+            <strong>Josue Cruz</strong>
+            <small>Technical Product</small>
+          </span>
+        </a>
+
+        <nav class="tabs" aria-label="Portfolio tabs" role="tablist">
+          <button
+            class="tab is-active"
+            id="tab-home"
+            type="button"
+            data-tab="home"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+          >
+            Home
+          </button>
+          <button
+            class="tab"
+            id="tab-blogs"
+            type="button"
+            data-tab="blogs"
+            role="tab"
+            aria-controls="blogs"
+            aria-selected="false"
+          >
+            Blogs
+          </button>
+          <button
+            class="tab"
+            id="tab-resume"
+            type="button"
+            data-tab="resume"
+            role="tab"
+            aria-controls="resume"
+            aria-selected="false"
+          >
+            Resume
+          </button>
+          <button
+            class="tab"
+            id="tab-contact"
+            type="button"
+            data-tab="contact"
+            role="tab"
+            aria-controls="contact"
+            aria-selected="false"
+          >
+            Contact
+          </button>
+        </nav>
+
+        <div class="header-actions" aria-label="Social and game links">
+          <a
+            href="https://www.linkedin.com/in/josue-cruz-610898238/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.94 8.98H3.72v10.29h3.22V8.98ZM5.34 4a1.86 1.86 0 1 0 .01 3.72A1.86 1.86 0 0 0 5.34 4Zm13.9 9.58c0-3.1-1.66-4.54-3.87-4.54a3.33 3.33 0 0 0-3 1.64h-.04v-1.7H9.25v10.29h3.2v-5.1c0-1.34.25-2.64 1.91-2.64 1.64 0 1.66 1.53 1.66 2.73v5.01h3.21v-5.69Z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/Josue-Crz" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3.5a8.8 8.8 0 0 0-2.78 17.15c.44.08.6-.19.6-.42v-1.5c-2.45.53-2.97-1.05-2.97-1.05-.4-1.02-.98-1.3-.98-1.3-.8-.55.06-.54.06-.54.89.06 1.36.91 1.36.91.79 1.35 2.07.96 2.57.74.08-.57.31-.96.56-1.18-1.96-.22-4.02-.98-4.02-4.36 0-.96.34-1.75.9-2.37-.09-.22-.39-1.12.09-2.34 0 0 .74-.24 2.42.9a8.35 8.35 0 0 1 4.4 0c1.68-1.14 2.42-.9 2.42-.9.48 1.22.18 2.12.09 2.34.56.62.9 1.4.9 2.37 0 3.39-2.06 4.13-4.03 4.35.32.28.6.82.6 1.65v2.28c0 .23.16.5.61.42A8.8 8.8 0 0 0 12 3.5Z"/>
+            </svg>
+          </a>
+          <a href="mailto:josuecruz3830@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.75 6.5h14.5c.96 0 1.75.79 1.75 1.75v8.5c0 .96-.79 1.75-1.75 1.75H4.75A1.75 1.75 0 0 1 3 16.75v-8.5c0-.96.79-1.75 1.75-1.75Zm.55 1.5 6.7 4.55L18.7 8H5.3Zm14.2 1.32-6.95 4.72a1 1 0 0 1-1.1 0L4.5 9.32v7.43c0 .14.11.25.25.25h14.5c.14 0 .25-.11.25-.25V9.32Z"/>
+            </svg>
+          </a>
+          <button class="game-launch" type="button" data-game-open aria-label="Open mini bird game">
+            <img src="assets/Flappy_Bird_icon.png" alt="" aria-hidden="true">
+          </button>
+          <button class="game-launch maze-launch" type="button" data-maze-open aria-label="Open pixel maze game">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <rect class="maze-icon-bg" x="2" y="2" width="28" height="28" rx="4"/>
+              <path class="maze-icon-wall" d="M6 6h20v4H10v4h12v4H10v8H6V6Zm16 12h4v8H14v-4h8v-4Z"/>
+              <circle class="maze-icon-player" cx="10" cy="22" r="3.2"/>
+              <circle class="maze-icon-dot" cx="22" cy="10" r="1.5"/>
+              <circle class="maze-icon-dot" cx="22" cy="14" r="1.5"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="tab-panel is-active" id="home" data-panel="home" role="tabpanel" aria-labelledby="tab-home" tabindex="-1">
+          <div class="hero-section">
+            <div class="hero-copy">
+              <p class="eyebrow">CS @ SFSU / Outreach Chair @ SF Hacks</p>
+              <h1>Technical product builder connecting users, systems, and teams.</h1>
+              <p class="hero-copy__lead">
+                I'm Josue Cruz, a Computer Science student at San Francisco State University focused on technical
+                program management, software engineering, open-source collaboration, and IoT products that turn messy
+                real-world needs into coordinated execution.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn--primary" href="assets/Josue_Cruz_Resume.pdf" target="_blank" rel="noreferrer">
+                  Open Resume
+                </a>
+                <a class="btn btn--ghost" href="#contact" data-tab-link="contact">Contact Me</a>
+              </div>
+              <dl class="signal-grid" aria-label="Portfolio highlights">
+                <div>
+                  <dt>Direction</dt>
+                  <dd>Seeking Technical Program Management internships and product-adjacent engineering roles.</dd>
+                </div>
+                <div>
+                  <dt>Strength</dt>
+                  <dd>Security-focused development, technical documentation, sponsor outreach, and team coordination.</dd>
+                </div>
+                <div>
+                  <dt>Interests</dt>
+                  <dd>Embedded systems, lower-level software, IoT, developer communities, and practical full-stack tools.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <aside class="profile-card" aria-label="Josue Cruz profile summary">
+              <div class="profile-photo-frame">
+                <img src="assets/Josue_Cruz_Headshot.png" alt="Professional headshot of Josue Cruz.">
+              </div>
+              <div class="profile-card__body">
+                <p class="profile-kicker">San Francisco, CA</p>
+                <h2>Josue Cruz</h2>
+                <p>He/Him</p>
+                <p>Computer Science student, expected May 2028. Open-source contributor and hackathon community builder.</p>
+                <div class="profile-links">
+                  <a href="https://github.com/Josue-Crz" target="_blank" rel="noreferrer">GitHub</a>
+                  <a href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noreferrer">LinkedIn</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <section class="section-band section-band--split" aria-labelledby="about-title">
+            <div>
+              <p class="eyebrow">About</p>
+              <h2 id="about-title">A CS student building the habits of a product leader.</h2>
+            </div>
+            <div class="about-grid">
+              <article>
+                <h3>Technical foundation</h3>
+                <p>
+                  I study Computer Science at SFSU with coursework across data structures, object-oriented programming,
+                  computer architecture, assembly, and linear algebra. I enjoy learning how systems work closer to the
+                  hardware and how software teams translate complexity into reliable products.
+                </p>
+              </article>
+              <article>
+                <h3>Community leadership</h3>
+                <p>
+                  As Outreach Chair for SF Hacks at SFSU, I coordinate sponsor outreach, partnerships, and hackathon
+                  initiatives across the Bay Area while helping event teams communicate clearly with campus groups and
+                  industry partners.
+                </p>
+              </article>
+              <article>
+                <h3>Product lens</h3>
+                <p>
+                  My strongest work sits where engineering, user needs, and execution meet: writing technical docs,
+                  organizing milestones, testing assumptions, and keeping teams aligned while prototypes move from idea
+                  to shipped demo.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-band" aria-labelledby="project-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Selected Projects</p>
+                <h2 id="project-title">Portfolio projects with product, engineering, and coordination signals.</h2>
+              </div>
+            </div>
+            <div class="case-grid case-grid--wide">
+              <article class="case-card">
+                <span class="case-card__tag">IoT / Hackathon / Product</span>
+                <h3>GreenSense</h3>
+                <p>
+                  Built during SF Hacks 2026 in under three days, GreenSense is a full-stack IoT climate monitoring
+                  product for energy-aware HVAC decisions using Arduino sensor data, real-time telemetry, and AI-assisted
+                  room suggestions.
+                </p>
+                <div class="badge-list case-card__languages" aria-label="GreenSense programming languages">
+                  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111">
+                  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+                  <img alt="C++" src="https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white">
+                  <img alt="Arduino" src="https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white">
+                </div>
+                <ul>
+                  <li>Directed team milestones and frontend/backend integration.</li>
+                  <li>Designed a Flask and React telemetry pipeline for real-time monitoring.</li>
+                  <li>Connected environmental analytics to a sustainability-focused product story.</li>
+                </ul>
+              </article>
+              <article class="case-card">
+                <span class="case-card__tag">IoT / Computer Vision / Firebase</span>
+                <h3>Dogs2Home</h3>
+                <p>
+                  A proof-of-concept home monitoring app inspired by Ring-style alerts, built in under a day to detect
+                  property damage events through Google Cloud Vision and synchronize alerts through Firebase.
+                </p>
+                <div class="badge-list case-card__languages" aria-label="Dogs2Home programming languages">
+                  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111">
+                  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+                </div>
+                <ul>
+                  <li>Coordinated hardware triggers, cloud detection, and real-time database updates.</li>
+                  <li>Built backend communication flows for live web alerts.</li>
+                  <li>Framed a playful prototype around a clear user pain point.</li>
+                </ul>
+              </article>
+              <article class="case-card">
+                <span class="case-card__tag">Open Source / Security / TPM</span>
+                <h3>Keyshade.io Input Field Sanitation</h3>
+                <p>
+                  Contributed security-focused improvements to Keyshade.io through CodeDay micro-internship work,
+                  helping address XSS risks in a professional Nest.js and Next.js open-source codebase.
+                </p>
+                <div class="badge-list case-card__languages" aria-label="Keyshade.io programming languages">
+                  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white">
+                </div>
+                <ul>
+                  <li>Implemented TypeScript and Zod validation for safer input handling.</li>
+                  <li>Participated in standups, review cycles, and contributor coordination.</li>
+                  <li>Managed technical communication around an active pull request.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-band" aria-labelledby="tech-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Technology Stack</p>
+                <h2 id="tech-title">Tools I use to build, coordinate, and communicate.</h2>
+              </div>
+            </div>
+            <div class="tech-stack">
+              <article>
+                <h3>Frontend</h3>
+                <div class="badge-list" aria-label="Frontend skills">
+                  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB">
+                  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js">
+                  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111">
+                  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white">
+                </div>
+              </article>
+              <article>
+                <h3>Backend</h3>
+                <div class="badge-list" aria-label="Backend skills">
+                  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+                  <img alt="Flask" src="https://img.shields.io/badge/Flask-black?style=flat&logo=flask">
+                  <img alt="NestJS" src="https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white">
+                  <img alt="REST APIs" src="https://img.shields.io/badge/REST_APIs-6E56B9?style=flat">
+                  <img alt="Firebase" src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=111111">
+                </div>
+              </article>
+              <article>
+                <h3>Systems & IoT</h3>
+                <div class="badge-list" aria-label="Systems and IoT skills">
+                  <img alt="C" src="https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=111111">
+                  <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white">
+                  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=111111">
+                  <img alt="Arduino" src="https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white">
+                  <img alt="Google Cloud" src="https://img.shields.io/badge/Google_Cloud-4285F4?style=flat&logo=googlecloud&logoColor=white">
+                </div>
+              </article>
+              <article>
+                <h3>Collaboration</h3>
+                <div class="badge-list" aria-label="Collaboration skills">
+                  <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white">
+                  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white">
+                  <img alt="Technical Documentation" src="https://img.shields.io/badge/Technical_Docs-C24E87?style=flat">
+                  <img alt="Stakeholder Communication" src="https://img.shields.io/badge/Stakeholder_Communication-3477A2?style=flat">
+                  <img alt="Project Coordination" src="https://img.shields.io/badge/Project_Coordination-6E56B9?style=flat">
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-band section-band--split" aria-labelledby="principles-title">
+            <div>
+              <p class="eyebrow">Product Operating System</p>
+              <h2 id="principles-title">How I approach ambiguous technical work.</h2>
+            </div>
+            <div class="principles">
+              <article>
+                <span>01</span>
+                <h3>Start with the user pain and the constraint.</h3>
+                <p>
+                  I look for the manual workaround, the technical bottleneck, and the moment where users need the
+                  product to be clearer, faster, or more trustworthy.
+                </p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Make the next milestone visible.</h3>
+                <p>
+                  Whether it is a hackathon build, open-source PR, or sponsor conversation, I like turning uncertainty
+                  into owners, milestones, risks, and a practical next decision.
+                </p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Write down what the team needs to remember.</h3>
+                <p>
+                  Technical documentation, review notes, and clear updates are part of the product. They help teams move
+                  faster without losing context.
+                </p>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="tab-panel" id="blogs" data-panel="blogs" role="tabpanel" aria-labelledby="tab-blogs" tabindex="-1" hidden>
+          <div class="page-intro">
+            <p class="eyebrow">Writing</p>
+            <h1>Open-source notes from real issues and pull requests.</h1>
+            <p>
+              Two technical writeups on security, maintainability, maintainer communication, and what I learned while
+              contributing to production open-source projects.
+            </p>
+          </div>
+          <div class="blog-list">
+            <article class="blog-card">
+              <p class="blog-card__meta">Mar-Apr 2026 / Open Source Maintenance</p>
+              <div class="blog-card__content">
+                <h2>Turning a John the Ripper Good First Issue Into a Draft PR</h2>
+                <p>
+                  I started with openwall/john issue #3896, a maintenance issue titled "Consistently (don't) split long
+                  source file lines." At first glance it looked like a formatting task. Once I read deeper, it became a
+                  lesson in how small style decisions can affect portability, readability, and contributor trust inside a
+                  mature C codebase.
+                </p>
+                <h3>What the issue was really about</h3>
+                <p>
+                  The issue called out a long OpenBSD-SoftRAID test vector that had been split with backslash
+                  continuations. The maintainer proposed a safer approach: close the string on one line, reopen it on
+                  the next, and let the compiler concatenate adjacent string constants. That avoids depending on details
+                  like trailing whitespace. The second part of the issue was consistency: if one long source line is
+                  split, similarly long lines across the project should be handled with the same rule.
+                </p>
+                <h3>How I approached the draft PR</h3>
+                <p>
+                  My first draft built on magnumripper's earlier PR #3908. I focused on
+                  <code>src/openbsdsoftraid_variable_code.h</code>, split long test vectors into adjacent string
+                  constants, and experimented with an <code>.editorconfig</code> line-length rule. I originally aimed
+                  for short 80-character splits around delimiter boundaries because that felt readable to me.
+                </p>
+                <p>
+                  The maintainer feedback helped me recalibrate. The project did not want a broad delimiter-based
+                  refactor, and it did not want lines split that aggressively. The better target was closer to the
+                  existing project discussion: roughly 2000 characters per line for these huge vectors, with changes
+                  scoped to the original issue instead of expanding the problem.
+                </p>
+                <h3>Validation and takeaway</h3>
+                <p>
+                  I tested the OpenBSD-SoftRAID format with
+                  <code>./john --test --format=openbsd-softraid</code>, and the benchmark completed successfully. The
+                  bigger win was learning how to turn maintainer feedback into a better contribution: read the history,
+                  stay inside the issue's scope, preserve behavior, and ask clarifying questions early when style and
+                  maintainability are part of the bug.
+                </p>
+                <ul>
+                  <li>Issue: long C/header source lines needed consistent treatment.</li>
+                  <li>Draft PR: split OpenBSD-SoftRAID test vectors using adjacent string literals.</li>
+                  <li>Lesson: in a mature security tool, "just formatting" still needs technical discipline.</li>
+                </ul>
+                <p class="blog-card__links">
+                  <a href="https://github.com/openwall/john/issues/3896" target="_blank" rel="noreferrer">
+                    Issue #3896
+                  </a>
+                  <a href="https://github.com/openwall/john/pull/5967" target="_blank" rel="noreferrer">
+                    Draft PR #5967
+                  </a>
+                </p>
+              </div>
+            </article>
+            <article class="blog-card">
+              <p class="blog-card__meta">Feb 2026 / Security & Full Stack</p>
+              <div class="blog-card__content">
+                <h2>Hardening Keyshade.io Through Input Field Sanitation</h2>
+                <p>
+                  Keyshade.io is an open-source secret and configuration management platform. Because it helps teams
+                  protect API keys, credentials, tokens, and deployment configuration, the inputs around projects,
+                  environments, variables, secrets, and users have to be handled carefully. Our CodeDay team worked on
+                  strengthening that front gate: the point where user-controlled text first enters the system.
+                </p>
+                <h3>The security problem</h3>
+                <p>
+                  The issue was not encryption itself. It was the input path around the application. If unicode,
+                  emojis, script-like strings, or unexpected special characters are accepted too freely, they can create
+                  broken slugs, unsafe requests, confusing UI states, or validation gaps between frontend and backend
+                  behavior. These are the same kinds of trust-boundary weaknesses that make XSS and malformed-input
+                  bugs possible. In a secrets platform, even small validation mistakes deserve attention.
+                </p>
+                <h3>Where I investigated</h3>
+                <p>
+                  I focused on the platform side first and looked for form entry points with searches around
+                  <code>onSubmit</code> and <code>handleSubmit</code>. That led to files such as
+                  <code>auth-email-form.tsx</code>, <code>otp-input-form.tsx</code>, and
+                  <code>updateIntegrationSheet/index.tsx</code>. I also traced helper-level validation through
+                  <code>is-email-valid.ts</code>, which helped connect individual forms to reusable validation logic.
+                </p>
+                <h3>The schema-driven solution</h3>
+                <p>
+                  The team PR introduced centralized Zod schemas, including <code>AlphaNumericStringSchema</code>,
+                  <code>VariableAlphaNumericStringSchema</code>, <code>ExtendedAlphaNumericStringSchema</code>, and a
+                  color-code variant. Instead of writing one-off checks inside every component, the validation rules
+                  lived in the shared schema package and were applied across project, environment, integration,
+                  personal access token, secret, variable, user, workspace, and workspace-role request shapes.
+                </p>
+                <p>
+                  On the frontend, the project creation flow used schema parsing before sending a request, showing a
+                  toast when a project name was not alphanumeric or was empty. The larger security idea was defense in
+                  depth: frontend validation improves feedback, while backend validation still needs to reject unsafe
+                  input because browser-side checks can be bypassed.
+                </p>
+                <h3>Collaboration and coordination</h3>
+                <p>
+                  The work also had a product-management layer. A maintainer pointed out overlap with Keyshade issue
+                  #929, which described unicode values being accepted and then stripped into broken slugs. We clarified
+                  how our work related to the existing thread, asked where helper logic should live, and coordinated
+                  dependent frontend, backend, and CLI PRs so the shared schema changes could land cleanly.
+                </p>
+                <ul>
+                  <li>Issue: user input needed stricter alphanumeric validation.</li>
+                  <li>Solution: shared Zod schemas with safe parsing before data moved deeper into the app.</li>
+                  <li>Lesson: security work is also coordination work when multiple contributors touch shared contracts.</li>
+                </ul>
+                <p class="blog-card__links">
+                  <a href="https://github.com/keyshade-xyz/keyshade/pull/1278" target="_blank" rel="noreferrer">
+                    Team PR #1278
+                  </a>
+                  <a href="https://github.com/keyshade-xyz/keyshade/issues/929" target="_blank" rel="noreferrer">
+                    Related Issue #929
+                  </a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="resume" data-panel="resume" role="tabpanel" aria-labelledby="tab-resume" tabindex="-1" hidden>
+          <div class="page-intro">
+            <p class="eyebrow">Resume</p>
+            <h1>Technical program management internship profile.</h1>
+            <p>
+              Computer Science student with experience in technical documentation, security-focused development,
+              sponsor outreach, project coordination, and collaborative software delivery.
+            </p>
+          </div>
+          <div class="resume-layout">
+            <section class="resume-panel" aria-labelledby="education-title">
+              <h2 id="education-title">Education</h2>
+              <div class="resume-item">
+                <h3>San Francisco State University</h3>
+                <p>B.S. Computer Science, expected May 2028</p>
+                <p>GPA: 3.5</p>
+              </div>
+              <div class="resume-item">
+                <h3>City College of San Francisco</h3>
+                <p>Associate's degree, Computer Science</p>
+                <p>Dean's Honor List, Fall/Spring 2024-2025</p>
+              </div>
+              <p class="resume-note">
+                Coursework: Data Structures & Algorithms, Object-Oriented Programming, Computer Architecture,
+                Assembly Language, Linear Algebra.
+              </p>
+            </section>
+
+            <section class="resume-panel" aria-labelledby="skills-title">
+              <h2 id="skills-title">Core Skills</h2>
+              <div class="skill-cloud" aria-label="Skills list">
+                <span>Technical Documentation</span>
+                <span>Stakeholder Communication</span>
+                <span>Project Coordination</span>
+                <span>Agile Collaboration</span>
+                <span>Team Leadership</span>
+                <span>TypeScript</span>
+                <span>Python</span>
+                <span>Java</span>
+                <span>C</span>
+                <span>Flask</span>
+                <span>Firebase</span>
+                <span>Next.js</span>
+                <span>Nest.js</span>
+                <span>Linux</span>
+                <span>Git/GitHub</span>
+              </div>
+            </section>
+
+            <section class="resume-panel" aria-labelledby="experience-title">
+              <h2 id="experience-title">Experience</h2>
+              <div class="timeline">
+                <article>
+                  <span>Mar 2026 - Present</span>
+                  <h3>Outreach Chair / SF Hacks at SFSU</h3>
+                  <p>
+                    Lead sponsor outreach and partnership coordination with corporations, campus organizations, and
+                    industry representatives while supporting event planning for Bay Area student technology events.
+                  </p>
+                </article>
+                <article>
+                  <span>Jan 2026 - Present</span>
+                  <h3>Open Source Contributor / CodeDay & Keyshade.io</h3>
+                  <p>
+                    Collaborated in a mentored engineering team on security-focused improvements for Keyshade.io,
+                    implementing TypeScript and Zod validation while coordinating through standups, reviews, and Git
+                    workflows.
+                  </p>
+                </article>
+                <article>
+                  <span>Jun 2025 - Feb 2026</span>
+                  <h3>Computing Talent Initiative Accelerate Program</h3>
+                  <p>
+                    Developed experience with Python, Git workflows, collaborative software development, technical
+                    communication, accountability, documentation, and iterative problem-solving.
+                  </p>
+                </article>
+                <article>
+                  <span>Aug 2025 - Dec 2025</span>
+                  <h3>Teacher's Assistant / City College of San Francisco</h3>
+                  <p>
+                    Supported coursework communication, grading coordination, and assignment feedback for classes of up
+                    to 100 students.
+                  </p>
+                </article>
+                <article>
+                  <span>Aug 2025 - Feb 2026</span>
+                  <h3>Quality Assurance Volunteer Tester / Madhouse Productions</h3>
+                  <p>
+                    Tested gameplay updates, documented bugs, and communicated feedback with developers for an indie
+                    Roblox game studio with a 4,000+ member community.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="resume-panel" aria-labelledby="certs-title">
+              <h2 id="certs-title">Certifications & Involvement</h2>
+              <div class="resume-item">
+                <h3>Google Certifications</h3>
+                <p>Technical Support Fundamentals, issued Aug 2023. Credential ID: 4T3ZP5EZSXMD.</p>
+                <p>The Bits and Bytes of Computer Networking, issued Sep 2023. Credential ID: FN6XXG5SN9TS.</p>
+              </div>
+              <div class="resume-item">
+                <h3>Volunteering</h3>
+                <p>Student Volunteer, The City Eats Inc., Feb 2026 - Present.</p>
+              </div>
+              <div class="resume-actions">
+                <a class="btn btn--primary resume-download" href="assets/Josue_Cruz_Resume.pdf" target="_blank" rel="noreferrer">
+                  Open Resume PDF
+                </a>
+                <a class="btn btn--ghost" href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noreferrer">
+                  LinkedIn Profile
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="contact" data-panel="contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="-1" hidden>
+          <div class="page-intro">
+            <p class="eyebrow">Contact</p>
+            <h1>Let's build the next useful thing.</h1>
+            <p>
+              I am open to technical program management internships, software engineering opportunities, open-source
+              collaboration, and hackathon or community partnerships.
+            </p>
+          </div>
+          <div class="contact-layout">
+            <form class="contact-form" action="https://formspree.io/f/xdajodqg" method="post" data-contact-form>
+              <input type="hidden" name="_subject" value="New portfolio message for Josue Cruz">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Tell me what you're working on" required></textarea>
+              </label>
+              <button class="btn btn--primary" type="submit">Send Message</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </form>
+            <aside class="contact-aside" aria-label="Contact links">
+              <h2>Contact Info</h2>
+              <a href="mailto:josuecruz3830@gmail.com">
+                <span>Email preferred</span>
+                josuecruz3830@gmail.com
+              </a>
+              <a href="sms:+16504403972">
+                <span>Text preferred for cell</span>
+                +1 (650) 440-3972
+              </a>
+              <a href="https://github.com/Josue-Crz" target="_blank" rel="noreferrer">github.com/Josue-Crz</a>
+              <a href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noreferrer">
+                linkedin.com/in/josue-cruz-610898238
+              </a>
+
+              <div class="birthday-card" aria-label="Birthday countdown">
+                <span>Next birthday</span>
+                <strong>November 3</strong>
+                <p data-birthday-countdown>Calculating countdown...</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="game-modal" data-game-modal hidden>
+      <div class="game-window" role="dialog" aria-modal="true" aria-labelledby="game-title">
+        <div class="game-header">
+          <div>
+            <p class="eyebrow">Mini Game</p>
+            <h2 id="game-title">Tiny Flap</h2>
+          </div>
+          <div class="game-scoreboard" aria-live="polite">
+            <span>Score</span>
+            <strong data-game-score>0</strong>
+          </div>
+          <button class="game-icon-button" type="button" data-game-close aria-label="Close mini game">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6.4 5.3 5.6 5.6 5.6-5.6 1.1 1.1-5.6 5.6 5.6 5.6-1.1 1.1-5.6-5.6-5.6 5.6-1.1-1.1 5.6-5.6-5.6-5.6 1.1-1.1Z"/>
+            </svg>
+          </button>
+        </div>
+        <canvas
+          class="game-canvas"
+          data-game-canvas
+          width="420"
+          height="620"
+          aria-label="Tiny Flap canvas game"
+        ></canvas>
+        <div class="game-controls">
+          <button class="btn btn--primary" type="button" data-game-start>Start</button>
+          <button class="btn btn--ghost" type="button" data-game-restart>Restart</button>
+          <button class="btn btn--ghost" type="button" data-game-sound aria-pressed="true">Sound On</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-modal" data-maze-modal hidden>
+      <div class="game-window game-window--maze" role="dialog" aria-modal="true" aria-labelledby="maze-title">
+        <div class="game-header">
+          <div>
+            <p class="eyebrow">Mini Game</p>
+            <h2 id="maze-title">Pixel Maze</h2>
+          </div>
+          <div class="game-scoreboard" aria-live="polite">
+            <span>Score</span>
+            <strong data-maze-score>0</strong>
+          </div>
+          <div class="game-scoreboard" aria-live="polite">
+            <span>Lives</span>
+            <strong data-maze-lives>3</strong>
+          </div>
+          <button class="game-icon-button" type="button" data-maze-close aria-label="Close pixel maze game">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6.4 5.3 5.6 5.6 5.6-5.6 1.1 1.1-5.6 5.6 5.6 5.6-1.1 1.1-5.6-5.6-5.6 5.6-1.1-1.1 5.6-5.6-5.6-5.6 1.1-1.1Z"/>
+            </svg>
+          </button>
+        </div>
+        <canvas
+          class="maze-canvas"
+          data-maze-canvas
+          width="420"
+          height="420"
+          aria-label="Pixel Maze canvas game"
+        ></canvas>
+        <div class="game-controls">
+          <button class="btn btn--primary" type="button" data-maze-start>Start</button>
+          <button class="btn btn--ghost" type="button" data-maze-restart>Restart</button>
+          <button class="btn btn--ghost" type="button" data-maze-sound aria-pressed="true">Sound On</button>
+        </div>
+        <div class="maze-pad" aria-label="Pixel Maze direction controls">
+          <button type="button" data-maze-dir="up" aria-label="Move up">U</button>
+          <button type="button" data-maze-dir="left" aria-label="Move left">L</button>
+          <button type="button" data-maze-dir="down" aria-label="Move down">D</button>
+          <button type="button" data-maze-dir="right" aria-label="Move right">R</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

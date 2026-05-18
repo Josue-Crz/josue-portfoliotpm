@@ -13,7 +13,7 @@ This site is a single-page portfolio with tabbed sections for home, blogs, resum
 The portfolio highlights:
 
 - TPM and product positioning for internships and product-adjacent engineering roles.
-- Selected projects: GreenSense, Dogs2Home, and Keyshade.io input field sanitation.
+- Selected projects: GreenSense, Dogs2Home, Keyshade.io input field sanitation, and CouchMunch.
 - Open-source blog posts based on real issues and pull requests.
 - Resume content, contact preferences, social links, and two small canvas mini games.
 - Scroll-triggered section highlighting and responsive card layouts.

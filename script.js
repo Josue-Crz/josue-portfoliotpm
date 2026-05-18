@@ -1,4 +1,5 @@
 const loader = document.querySelector("[data-loader]");
+const favicon = document.querySelector("#favicon");
 const tabs = [...document.querySelectorAll("[data-tab]")];
 const panels = [...document.querySelectorAll("[data-panel]")];
 const tabLinks = [...document.querySelectorAll("[data-tab-link]")];
@@ -28,6 +29,23 @@ const scrollSections = [
 ];
 
 const getSectionTitle = (section) => section.querySelector("h1, h2");
+
+const animateFavicon = () => {
+  if (!favicon) {
+    return;
+  }
+
+  const frames = Array.from(
+    { length: 12 },
+    (_, index) => `assets/turtlefavicon-frames/turtlefavicon-${String(index).padStart(2, "0")}.gif`,
+  );
+  let frameIndex = 0;
+
+  window.setInterval(() => {
+    frameIndex = (frameIndex + 1) % frames.length;
+    favicon.href = frames[frameIndex];
+  }, 120);
+};
 
 scrollSections.forEach((section) => {
   section.classList.add("scroll-reveal-section");
@@ -1226,6 +1244,7 @@ window.addEventListener("load", () => {
     showTab(initialTab);
   }
 
+  animateFavicon();
   updateBirthdayCountdown();
   window.setInterval(updateBirthdayCountdown, 1000);
 

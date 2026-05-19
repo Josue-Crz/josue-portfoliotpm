@@ -3,8 +3,6 @@ const favicon = document.querySelector("#favicon");
 const tabs = [...document.querySelectorAll("[data-tab]")];
 const panels = [...document.querySelectorAll("[data-panel]")];
 const tabLinks = [...document.querySelectorAll("[data-tab-link]")];
-const contactForm = document.querySelector("[data-contact-form]");
-const formStatus = document.querySelector("[data-form-status]");
 const birthdayCountdown = document.querySelector("[data-birthday-countdown]");
 const gameModal = document.querySelector("[data-game-modal]");
 const gameOpenButton = document.querySelector("[data-game-open]");
@@ -142,64 +140,6 @@ tabLinks.forEach((link) => {
     showTab(tabName, true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-});
-
-contactForm?.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  if (formStatus) {
-    formStatus.dataset.state = "";
-    formStatus.textContent = "Sending your message...";
-  }
-
-  if (contactForm.action.includes("yourFormId")) {
-    if (formStatus) {
-      formStatus.dataset.state = "error";
-      formStatus.textContent = "Formspree is not connected yet. Email Josue directly at josuecruz3830@gmail.com.";
-    }
-
-    return;
-  }
-
-  const formData = new FormData(contactForm);
-  const submitButton = contactForm.querySelector("button[type='submit']");
-  const originalButtonText = submitButton?.textContent || "Send Message";
-
-  if (submitButton) {
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
-  }
-
-  try {
-    const response = await fetch(contactForm.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error("Form submission failed");
-    }
-
-    contactForm.reset();
-
-    if (formStatus) {
-      formStatus.dataset.state = "success";
-      formStatus.textContent = "Message sent. Thanks for reaching out to Josue.";
-    }
-  } catch (error) {
-    if (formStatus) {
-      formStatus.dataset.state = "error";
-      formStatus.textContent = "Something went wrong. Email Josue directly at josuecruz3830@gmail.com.";
-    }
-  } finally {
-    if (submitButton) {
-      submitButton.disabled = false;
-      submitButton.textContent = originalButtonText;
-    }
-  }
 });
 
 const updateBirthdayCountdown = () => {

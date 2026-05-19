@@ -664,7 +664,7 @@ body.is-ready .site-shell {
 .case-card,
 .blog-card,
 .resume-panel,
-.contact-form,
+.contact-card,
 .contact-aside,
 .principles article,
 .about-grid article,
@@ -961,59 +961,34 @@ body.is-ready .site-shell {
   padding-bottom: 80px;
 }
 
-.contact-form {
+.contact-card {
   display: grid;
   gap: 16px;
+  align-content: start;
   padding: 22px;
 }
 
-.contact-form label {
-  display: grid;
-  gap: 8px;
-  color: var(--text);
-  font-weight: 800;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  border: 1px solid rgba(91, 70, 122, 0.16);
-  border-radius: 8px;
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.62);
-}
-
-.contact-form input {
-  min-height: 44px;
-  padding: 0 14px;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 150px;
-  padding: 14px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: rgba(255, 120, 173, 0.56);
-  outline: none;
-}
-
-.form-status {
-  min-height: 22px;
+.contact-card h2 {
   margin: 0;
-  color: var(--sky-ink);
-  font-size: 0.92rem;
-  line-height: 1.5;
+  color: var(--berry);
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
-.form-status[data-state="success"] {
-  color: #247a61;
+.contact-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.62;
 }
 
-.form-status[data-state="error"] {
-  color: #a8325f;
+.contact-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-card__actions .btn {
+  width: auto;
 }
 
 .contact-aside {
@@ -1529,7 +1504,7 @@ body.is-ready .site-shell {
 
   .case-card,
   .resume-panel,
-  .contact-form,
+  .contact-card,
   .contact-aside,
   .principles article,
   .about-grid article,

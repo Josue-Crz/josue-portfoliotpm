@@ -15,7 +15,7 @@ The portfolio highlights:
 - TPM and product positioning for internships and product-adjacent engineering roles.
 - Selected projects: GreenSense, Dogs2Home, Keyshade.io input field sanitation, and CouchMunch.
 - Open-source blog posts based on real issues and pull requests.
-- Resume content, contact preferences, social links, and two small canvas mini games.
+- Resume content, direct contact links, contact preferences, social links, and two small canvas mini games.
 - Scroll-triggered section highlighting and responsive card layouts.
 
 ## File Structure
@@ -51,18 +51,7 @@ Then visit `http://localhost:8000`.
 - `Home`: profile summary, about section, selected projects, tech stack, and product operating principles.
 - `Blogs`: writeups for John the Ripper issue/PR work and Keyshade.io input field sanitation.
 - `Resume`: education, skills, experience, certifications, and resume PDF link.
-- `Contact`: email-first contact form, text-preferred phone contact, LinkedIn, GitHub, and website links.
-
-## Contact Form Setup
-
-The contact form is wired for Formspree so the site can stay static and deploy to GitHub Pages.
-
-1. Create a Formspree form at `https://formspree.io/` using `josuecruz3830@gmail.com`.
-2. Copy the generated endpoint. It will look like `https://formspree.io/f/yourFormId`.
-3. In `index.html`, replace `https://formspree.io/f/yourFormId` in the contact form `action` attribute with the real endpoint.
-4. Test a submission locally and then again from the GitHub Pages deployment.
-
-Until the real endpoint is added, the form shows a fallback message with the direct email address.
+- `Contact`: email-first direct links, text-preferred phone contact, LinkedIn, GitHub, and website links.
 
 ## Assets
 

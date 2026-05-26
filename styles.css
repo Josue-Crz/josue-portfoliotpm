@@ -325,6 +325,17 @@ body.is-ready .site-shell {
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
+.header-actions .header-resume-link {
+  display: inline-flex;
+  width: auto;
+  min-width: 86px;
+  padding: 0 14px;
+  color: var(--sky-ink);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .header-actions a:hover,
 .header-actions a:focus-visible,
 .header-actions button:hover,
@@ -953,6 +964,17 @@ body.is-ready .site-shell {
   margin-top: 18px;
 }
 
+.resume-item a {
+  color: var(--sky-ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.resume-item a:hover,
+.resume-item a:focus-visible {
+  text-decoration: underline;
+}
+
 .resume-note {
   margin-top: 18px;
 }
@@ -987,6 +1009,10 @@ body.is-ready .site-shell {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 20px;
+}
+
+.resume-actions--top {
+  margin: 0 0 18px;
 }
 
 .resume-download,
@@ -1480,6 +1506,12 @@ body.is-ready .site-shell {
     height: 44px;
   }
 
+  .header-actions .header-resume-link {
+    width: auto;
+    min-width: 78px;
+    padding: 0 10px;
+  }
+
   .header-actions button {
     width: 44px;
     height: 44px;
@@ -1574,6 +1606,34 @@ body.is-ready .site-shell {
   .site-header {
     gap: 8px;
     padding: 7px;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .header-actions a,
+  .header-actions button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header-actions .header-resume-link {
+    min-width: 64px;
+    height: 38px;
+    padding: 0 8px;
+    font-size: 0.78rem;
+  }
+
+  .header-actions svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .game-launch img,
+  .maze-launch svg {
+    width: 24px;
+    height: 24px;
   }
 
   .tabs {

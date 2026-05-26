@@ -25,6 +25,7 @@ const mazeDirectionButtons = [...document.querySelectorAll("[data-maze-dir]")];
 const scrollSections = [
   ...document.querySelectorAll(".hero-section, .section-band, .page-intro, .resume-panel"),
 ];
+const projectSection = document.querySelector(".section-band--project");
 
 const getSectionTitle = (section) => section.querySelector("h1, h2");
 
@@ -54,6 +55,10 @@ const triggerSectionHighlight = (section) => {
   const title = getSectionTitle(section);
 
   section.classList.add("is-section-visible");
+
+  if (section === projectSection) {
+    return;
+  }
 
   if (!title || title.dataset.highlighting === "true") {
     return;
@@ -91,6 +96,42 @@ if (scrollObserver) {
 } else {
   scrollSections.forEach(triggerSectionHighlight);
 }
+
+const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+const updateProjectSectionOpacity = () => {
+  if (!projectSection) {
+    return;
+  }
+
+  const rect = projectSection.getBoundingClientRect();
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  const fadeStart = viewportHeight * 0.9;
+  const fadeEnd = viewportHeight * 0.34;
+  const progress = clamp((fadeStart - rect.top) / (fadeStart - fadeEnd), 0, 1);
+  const sectionOpacity = 0.84 + progress * 0.16;
+  const titleOpacity = 0.88 + progress * 0.12;
+
+  projectSection.style.setProperty("--project-section-opacity", sectionOpacity.toFixed(3));
+  projectSection.style.setProperty("--project-title-opacity", titleOpacity.toFixed(3));
+};
+
+let projectOpacityFrame = 0;
+
+const queueProjectSectionOpacity = () => {
+  if (projectOpacityFrame) {
+    return;
+  }
+
+  projectOpacityFrame = window.requestAnimationFrame(() => {
+    projectOpacityFrame = 0;
+    updateProjectSectionOpacity();
+  });
+};
+
+updateProjectSectionOpacity();
+window.addEventListener("scroll", queueProjectSectionOpacity, { passive: true });
+window.addEventListener("resize", queueProjectSectionOpacity);
 
 const showTab = (tabName, shouldFocus = false) => {
   tabs.forEach((tab) => {

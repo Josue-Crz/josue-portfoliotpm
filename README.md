@@ -2,9 +2,7 @@
 
 A static portfolio website for Josue Cruz, a Computer Science student at San Francisco State University focused on technical program management, open-source collaboration, security-minded development, and IoT/full-stack product work.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111)
+Built with `HTML5`, `CSS3`, and `JavaScript`.
 
 ## Project Overview
 
@@ -28,7 +26,6 @@ The portfolio highlights:
 +-- assets/
 |   +-- Flappy_Bird_icon.png
 |   +-- Josue_Cruz_Headshot.png
-|   +-- Josue_Cruz_Resume.pdf
 |   +-- product-management-preview.svg
 +-- README.md
 +-- LICENSE
@@ -38,7 +35,7 @@ The portfolio highlights:
 
 Open `index.html` in a browser.
 
-Because this is a static site, no package install or local server is required. A local server can still be used if preferred:
+Because this is a static site, no package setup or local server is required. A local server can still be used if preferred:
 
 ```bash
 python3 -m http.server 8000
@@ -50,8 +47,8 @@ Then visit `http://localhost:8000`.
 
 - `Home`: profile summary, about section, selected projects, tech stack, and product operating principles.
 - `Blogs`: writeups for John the Ripper issue/PR work and Keyshade.io input field sanitation.
-- `Resume`: education, skills, experience, certifications, and resume PDF link.
-- `Contact`: email-first direct links, text-preferred phone contact, LinkedIn, GitHub, and website links.
+- `Resume`: education, skills, experience, certifications, and profile links.
+- `Contact`: email-first direct links, LinkedIn, GitHub, and website links.
 
 ## Assets
 

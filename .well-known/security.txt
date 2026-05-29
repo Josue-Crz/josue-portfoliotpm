@@ -1,0 +1,3 @@
+Contact: mailto:josuecruz3830@gmail.com
+Preferred-Languages: en
+Canonical: https://cruzbuilt.codes/.well-known/security.txt

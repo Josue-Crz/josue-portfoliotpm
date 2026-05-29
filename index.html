@@ -7,14 +7,15 @@
       name="description"
       content="Product management and technical program management portfolio for Josue Cruz, Computer Science student at San Francisco State University."
     >
-    <title>Josue Cruz | Technical Product Portfolio</title>
-    <link id="favicon" rel="icon" type="image/gif" href="assets/turtlefavicon-frames/turtlefavicon-00.gif">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
+    <meta name="author" content="Josue Cruz">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"
     >
+    <title>Josue Cruz | Technical Product Portfolio</title>
+    <link rel="canonical" href="https://cruzbuilt.codes/">
+    <link id="favicon" rel="icon" type="image/gif" href="assets/turtlefavicon-frames/turtlefavicon-00.gif">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -84,34 +85,20 @@
           </button>
         </nav>
 
-        <div class="header-actions" aria-label="Resume, social, and game links">
-          <a
-            class="header-resume-link"
-            href="assets/Josue_Cruz_Resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Open resume PDF"
-          >
-            Resume
-          </a>
+        <div class="header-actions" aria-label="Social and game links">
           <a
             href="https://www.linkedin.com/in/josue-cruz-610898238/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6.94 8.98H3.72v10.29h3.22V8.98ZM5.34 4a1.86 1.86 0 1 0 .01 3.72A1.86 1.86 0 0 0 5.34 4Zm13.9 9.58c0-3.1-1.66-4.54-3.87-4.54a3.33 3.33 0 0 0-3 1.64h-.04v-1.7H9.25v10.29h3.2v-5.1c0-1.34.25-2.64 1.91-2.64 1.64 0 1.66 1.53 1.66 2.73v5.01h3.21v-5.69Z"/>
             </svg>
           </a>
-          <a href="https://github.com/Josue-Crz" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <a href="https://github.com/Josue-Crz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 3.5a8.8 8.8 0 0 0-2.78 17.15c.44.08.6-.19.6-.42v-1.5c-2.45.53-2.97-1.05-2.97-1.05-.4-1.02-.98-1.3-.98-1.3-.8-.55.06-.54.06-.54.89.06 1.36.91 1.36.91.79 1.35 2.07.96 2.57.74.08-.57.31-.96.56-1.18-1.96-.22-4.02-.98-4.02-4.36 0-.96.34-1.75.9-2.37-.09-.22-.39-1.12.09-2.34 0 0 .74-.24 2.42.9a8.35 8.35 0 0 1 4.4 0c1.68-1.14 2.42-.9 2.42-.9.48 1.22.18 2.12.09 2.34.56.62.9 1.4.9 2.37 0 3.39-2.06 4.13-4.03 4.35.32.28.6.82.6 1.65v2.28c0 .23.16.5.61.42A8.8 8.8 0 0 0 12 3.5Z"/>
-            </svg>
-          </a>
-          <a href="mailto:josuecruz3830@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4.75 6.5h14.5c.96 0 1.75.79 1.75 1.75v8.5c0 .96-.79 1.75-1.75 1.75H4.75A1.75 1.75 0 0 1 3 16.75v-8.5c0-.96.79-1.75 1.75-1.75Zm.55 1.5 6.7 4.55L18.7 8H5.3Zm14.2 1.32-6.95 4.72a1 1 0 0 1-1.1 0L4.5 9.32v7.43c0 .14.11.25.25.25h14.5c.14 0 .25-.11.25-.25V9.32Z"/>
             </svg>
           </a>
           <button class="game-launch" type="button" data-game-open aria-label="Open mini bird game">
@@ -141,9 +128,7 @@
                 real-world needs into coordinated execution.
               </p>
               <div class="hero-actions">
-                <a class="btn btn--primary" href="assets/Josue_Cruz_Resume.pdf" target="_blank" rel="noreferrer">
-                  Open Resume
-                </a>
+                <a class="btn btn--primary" href="#resume" data-tab-link="resume">View Resume</a>
                 <a class="btn btn--ghost" href="#contact" data-tab-link="contact">Contact Me</a>
               </div>
               <dl class="signal-grid" aria-label="Portfolio highlights">
@@ -172,8 +157,8 @@
                 <p>He/Him</p>
                 <p>Computer Science student, expected May 2028. Open-source contributor and hackathon community builder.</p>
                 <div class="profile-links">
-                  <a href="https://github.com/Josue-Crz" target="_blank" rel="noreferrer">GitHub</a>
-                  <a href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <a href="https://github.com/Josue-Crz" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
               </div>
             </aside>
@@ -223,7 +208,7 @@
               <article class="case-card">
                 <span class="case-card__tag">Open Source / Security / Documentation</span>
                 <h3>
-                  <a href="https://docs.google.com/document/d/12Ac3wVEF5NnSmktKgqOOgm5CtTcIoS5psyk4UJSIStE/edit?usp=sharing" target="_blank" rel="noreferrer">
+                  <a href="https://docs.google.com/document/d/12Ac3wVEF5NnSmktKgqOOgm5CtTcIoS5psyk4UJSIStE/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                     Keyshade.io Input Field Sanitation
                   </a>
                 </h3>
@@ -232,7 +217,7 @@
                   helping address XSS risks in a professional Nest.js and Next.js open-source codebase.
                 </p>
                 <div class="badge-list case-card__languages" aria-label="Keyshade.io programming languages">
-                  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white">
+                  <span>TypeScript</span>
                 </div>
                 <ul>
                   <li>Implemented TypeScript and Zod validation for safer input handling.</li>
@@ -243,7 +228,7 @@
               <article class="case-card">
                 <span class="case-card__tag">AI / System Design / Tradeoffs</span>
                 <h3>
-                  <a href="https://couchmunch.me/" target="_blank" rel="noreferrer">CouchMunch</a>
+                  <a href="https://couchmunch.me/" target="_blank" rel="noopener noreferrer">CouchMunch</a>
                 </h3>
                 <p>
                   An AI-powered food recommendation app that turns cravings and location into nearby restaurant combos.
@@ -251,13 +236,13 @@
                   scaffolding, and prompt-driven product iteration.
                 </p>
                 <div class="badge-list case-card__languages" aria-label="CouchMunch technology stack">
-                  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js">
-                  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB">
-                  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white">
-                  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white">
-                  <img alt="Express" src="https://img.shields.io/badge/Express-black?style=flat&logo=express">
-                  <img alt="OpenAI" src="https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white">
-                  <img alt="Yelp Fusion" src="https://img.shields.io/badge/Yelp_Fusion-FF1A1A?style=flat&logo=yelp&logoColor=white">
+                  <span>Next.js</span>
+                  <span>React</span>
+                  <span>Tailwind CSS</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>OpenAI</span>
+                  <span>Yelp Fusion</span>
                 </div>
                 <ul>
                   <li>Reduced food-app decision fatigue with AI craving interpretation and ranked recommendation modes.</li>
@@ -269,7 +254,7 @@
               <article class="case-card">
                 <span class="case-card__tag">IoT / Hackathon / Product</span>
                 <h3>
-                  <a href="https://github.com/Josue-Crz/SFHacks-2026-Project" target="_blank" rel="noreferrer">GreenSense</a>
+                  <a href="https://github.com/Josue-Crz/SFHacks-2026-Project" target="_blank" rel="noopener noreferrer">GreenSense</a>
                 </h3>
                 <p>
                   Built during SF Hacks 2026 in under three days, GreenSense is a full-stack IoT climate monitoring
@@ -277,10 +262,10 @@
                   room suggestions.
                 </p>
                 <div class="badge-list case-card__languages" aria-label="GreenSense programming languages">
-                  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111">
-                  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
-                  <img alt="C++" src="https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white">
-                  <img alt="Arduino" src="https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white">
+                  <span>JavaScript</span>
+                  <span>Python</span>
+                  <span>C++</span>
+                  <span>Arduino</span>
                 </div>
                 <ul>
                   <li>Directed team milestones and frontend/backend integration.</li>
@@ -291,15 +276,15 @@
               <article class="case-card">
                 <span class="case-card__tag">IoT / Computer Vision / Firebase</span>
                 <h3>
-                  <a href="https://github.com/Josue-Crz/Dogs2Home" target="_blank" rel="noreferrer">Dogs2Home</a>
+                  <a href="https://github.com/Josue-Crz/Dogs2Home" target="_blank" rel="noopener noreferrer">Dogs2Home</a>
                 </h3>
                 <p>
                   A proof-of-concept home monitoring app inspired by Ring-style alerts, built in under a day to detect
                   property damage events through Google Cloud Vision and synchronize alerts through Firebase.
                 </p>
                 <div class="badge-list case-card__languages" aria-label="Dogs2Home programming languages">
-                  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111">
-                  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+                  <span>JavaScript</span>
+                  <span>Python</span>
                 </div>
                 <ul>
                   <li>Coordinated hardware triggers, cloud detection, and real-time database updates.</li>
@@ -321,40 +306,40 @@
               <article>
                 <h3>Frontend</h3>
                 <div class="badge-list" aria-label="Frontend skills">
-                  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB">
-                  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js">
-                  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=111111">
-                  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white">
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>JavaScript</span>
+                  <span>TypeScript</span>
                 </div>
               </article>
               <article>
                 <h3>Backend</h3>
                 <div class="badge-list" aria-label="Backend skills">
-                  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
-                  <img alt="Flask" src="https://img.shields.io/badge/Flask-black?style=flat&logo=flask">
-                  <img alt="NestJS" src="https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white">
-                  <img alt="REST APIs" src="https://img.shields.io/badge/REST_APIs-6E56B9?style=flat">
-                  <img alt="Firebase" src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=111111">
+                  <span>Python</span>
+                  <span>Flask</span>
+                  <span>NestJS</span>
+                  <span>REST APIs</span>
+                  <span>Firebase</span>
                 </div>
               </article>
               <article>
                 <h3>Systems & IoT</h3>
                 <div class="badge-list" aria-label="Systems and IoT skills">
-                  <img alt="C" src="https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=111111">
-                  <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white">
-                  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=111111">
-                  <img alt="Arduino" src="https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white">
-                  <img alt="Google Cloud" src="https://img.shields.io/badge/Google_Cloud-4285F4?style=flat&logo=googlecloud&logoColor=white">
+                  <span>C</span>
+                  <span>Java</span>
+                  <span>Linux</span>
+                  <span>Arduino</span>
+                  <span>Google Cloud</span>
                 </div>
               </article>
               <article>
                 <h3>Collaboration</h3>
                 <div class="badge-list" aria-label="Collaboration skills">
-                  <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white">
-                  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white">
-                  <img alt="Technical Documentation" src="https://img.shields.io/badge/Technical_Docs-C24E87?style=flat">
-                  <img alt="Stakeholder Communication" src="https://img.shields.io/badge/Stakeholder_Communication-3477A2?style=flat">
-                  <img alt="Project Coordination" src="https://img.shields.io/badge/Project_Coordination-6E56B9?style=flat">
+                  <span>Git</span>
+                  <span>GitHub</span>
+                  <span>Technical Docs</span>
+                  <span>Stakeholder Communication</span>
+                  <span>Project Coordination</span>
                 </div>
               </article>
             </div>
@@ -408,7 +393,7 @@
               <p class="blog-card__meta">Mar-Apr 2026 / Open Source Maintenance</p>
               <div class="blog-card__content">
                 <h2>
-                  <a href="https://github.com/openwall/john/issues/3896" target="_blank" rel="noreferrer">
+                  <a href="https://github.com/openwall/john/issues/3896" target="_blank" rel="noopener noreferrer">
                     Turning a John the Ripper Good First Issue Into a Draft PR
                   </a>
                 </h2>
@@ -453,10 +438,10 @@
                   <li>Lesson: in a mature security tool, "just formatting" still needs technical discipline.</li>
                 </ul>
                 <p class="blog-card__links">
-                  <a href="https://github.com/openwall/john/issues/3896" target="_blank" rel="noreferrer">
+                  <a href="https://github.com/openwall/john/issues/3896" target="_blank" rel="noopener noreferrer">
                     Issue #3896
                   </a>
-                  <a href="https://github.com/openwall/john/pull/5967" target="_blank" rel="noreferrer">
+                  <a href="https://github.com/openwall/john/pull/5967" target="_blank" rel="noopener noreferrer">
                     Draft PR #5967
                   </a>
                 </p>
@@ -466,14 +451,14 @@
               <p class="blog-card__meta">Feb 2026 / Security & Full Stack</p>
               <div class="blog-card__content">
                 <h2>
-                  <a href="https://github.com/Josue-Crz/keyshade-team-F-fork/pull/8" target="_blank" rel="noreferrer">
+                  <a href="https://github.com/Josue-Crz/keyshade-team-F-fork/pull/8" target="_blank" rel="noopener noreferrer">
                     Hardening Keyshade.io Through Input Field Sanitation
                   </a>
                 </h2>
                 <p>
-                  Keyshade.io is an open-source secret and configuration management platform. Because it helps teams
-                  protect API keys, credentials, tokens, and deployment configuration, the inputs around projects,
-                  environments, variables, secrets, and users have to be handled carefully. Our CodeDay team worked on
+                  Keyshade.io is an open-source configuration management platform. Because it helps teams
+                  protect deployment settings and application configuration, the inputs around projects,
+                  environments, variables, and users have to be handled carefully. Our CodeDay team worked on
                   strengthening that front gate: the point where user-controlled text first enters the system.
                 </p>
                 <h3>The security problem</h3>
@@ -482,15 +467,13 @@
                   emojis, script-like strings, or unexpected special characters are accepted too freely, they can create
                   broken slugs, unsafe requests, confusing UI states, or validation gaps between frontend and backend
                   behavior. These are the same kinds of trust-boundary weaknesses that make XSS and malformed-input
-                  bugs possible. In a secrets platform, even small validation mistakes deserve attention.
+                  bugs possible. In a configuration platform, even small validation mistakes deserve attention.
                 </p>
                 <h3>Where I investigated</h3>
                 <p>
-                  I focused on the platform side first and looked for form entry points with searches around
-                  <code>onSubmit</code> and <code>handleSubmit</code>. That led to files such as
-                  <code>auth-email-form.tsx</code>, <code>otp-input-form.tsx</code>, and
-                  <code>updateIntegrationSheet/index.tsx</code>. I also traced helper-level validation through
-                  <code>is-email-valid.ts</code>, which helped connect individual forms to reusable validation logic.
+                  I focused on the platform side first and looked for component entry points where user-provided text
+                  moved into request helpers. That led to authentication and integration flows, plus reusable
+                  validation helpers that connected individual components to shared validation logic.
                 </p>
                 <h3>The schema-driven solution</h3>
                 <p>
@@ -498,7 +481,7 @@
                   <code>VariableAlphaNumericStringSchema</code>, <code>ExtendedAlphaNumericStringSchema</code>, and a
                   color-code variant. Instead of writing one-off checks inside every component, the validation rules
                   lived in the shared schema package and were applied across project, environment, integration,
-                  personal access token, secret, variable, user, workspace, and workspace-role request shapes.
+                  variable, user, workspace, and workspace-role request shapes.
                 </p>
                 <p>
                   On the frontend, the project creation flow used schema parsing before sending a request, showing a
@@ -519,10 +502,10 @@
                   <li>Lesson: security work is also coordination work when multiple contributors touch shared contracts.</li>
                 </ul>
                 <p class="blog-card__links">
-                  <a href="https://github.com/keyshade-xyz/keyshade/pull/1278" target="_blank" rel="noreferrer">
+                  <a href="https://github.com/keyshade-xyz/keyshade/pull/1278" target="_blank" rel="noopener noreferrer">
                     Team PR #1278
                   </a>
-                  <a href="https://github.com/keyshade-xyz/keyshade/issues/929" target="_blank" rel="noreferrer">
+                  <a href="https://github.com/keyshade-xyz/keyshade/issues/929" target="_blank" rel="noopener noreferrer">
                     Related Issue #929
                   </a>
                 </p>
@@ -541,10 +524,8 @@
             </p>
           </div>
           <div class="resume-actions resume-actions--top">
-            <a class="btn btn--primary resume-download" href="assets/Josue_Cruz_Resume.pdf" target="_blank" rel="noreferrer">
-              Open Resume PDF
-            </a>
-            <a class="btn btn--ghost" href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noreferrer">
+            <a class="btn btn--primary" href="#contact" data-tab-link="contact">Contact Me</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noopener noreferrer">
               LinkedIn Profile
             </a>
           </div>
@@ -641,15 +622,15 @@
                 <h3>Data Literacy</h3>
                 <p>IBM, issued May 2026.</p>
                 <p>
-                  <a href="https://www.credly.com/badges/52b942b4-b51f-40ae-8ef1-9477423467c0/linked_in_profile" target="_blank" rel="noreferrer">
-                    Show credential
+                  <a href="https://www.credly.com/badges/52b942b4-b51f-40ae-8ef1-9477423467c0/linked_in_profile" target="_blank" rel="noopener noreferrer">
+                    View IBM badge
                   </a>
                 </p>
               </div>
               <div class="resume-item">
                 <h3>Google Certifications</h3>
-                <p>Technical Support Fundamentals, issued Aug 2023. Credential ID: 4T3ZP5EZSXMD.</p>
-                <p>The Bits and Bytes of Computer Networking, issued Sep 2023. Credential ID: FN6XXG5SN9TS.</p>
+                <p>Technical Support Fundamentals, issued Aug 2023.</p>
+                <p>The Bits and Bytes of Computer Networking, issued Sep 2023.</p>
               </div>
               <div class="resume-item">
                 <h3>Volunteering</h3>
@@ -673,16 +654,15 @@
               <h2 id="contact-options-title">Preferred Contact</h2>
               <p>
                 Email is the best way to reach me for internships, collaborations, open-source work, or community
-                partnerships. If you use my cellular number, please text first.
+                partnerships.
               </p>
               <div class="contact-card__actions" aria-label="Direct contact options">
                 <a class="btn btn--primary" href="mailto:josuecruz3830@gmail.com">Email Me Directly</a>
-                <a class="btn btn--ghost" href="sms:+16504403972">Text My Cell</a>
                 <a
                   class="btn btn--ghost"
                   href="https://www.linkedin.com/in/josue-cruz-610898238/"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   LinkedIn
                 </a>
@@ -694,12 +674,8 @@
                 <span>Email preferred</span>
                 josuecruz3830@gmail.com
               </a>
-              <a href="sms:+16504403972">
-                <span>Text preferred for cell</span>
-                +1 (650) 440-3972
-              </a>
-              <a href="https://github.com/Josue-Crz" target="_blank" rel="noreferrer">github.com/Josue-Crz</a>
-              <a href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Josue-Crz" target="_blank" rel="noopener noreferrer">github.com/Josue-Crz</a>
+              <a href="https://www.linkedin.com/in/josue-cruz-610898238/" target="_blank" rel="noopener noreferrer">
                 linkedin.com/in/josue-cruz-610898238
               </a>
 
@@ -722,7 +698,7 @@
           class="site-footer__repo"
           href="https://github.com/Josue-Crz/josue-portfoliotpm"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="View this portfolio repository on GitHub"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">

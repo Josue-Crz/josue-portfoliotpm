@@ -532,10 +532,10 @@ const flapGame = (() => {
     ctx.strokeStyle = "rgba(91, 70, 122, 0.16)";
     ctx.strokeRect(52, 212, width - 104, 120);
     ctx.fillStyle = "#21172f";
-    ctx.font = "800 34px Inter, sans-serif";
+    ctx.font = "800 34px system-ui, sans-serif";
     ctx.textAlign = "center";
     ctx.fillText(mode === "over" ? "Game Over" : "Tiny Flap", width / 2, 258);
-    ctx.font = "700 15px Inter, sans-serif";
+    ctx.font = "700 15px system-ui, sans-serif";
     ctx.fillStyle = "#6d6178";
     ctx.fillText(mode === "over" ? `Score ${score}` : "Start", width / 2, 290);
   };
@@ -997,10 +997,10 @@ const mazeGame = (() => {
     ctx.strokeRect(48, 150, width - 96, 120);
     ctx.textAlign = "center";
     ctx.fillStyle = "#21172f";
-    ctx.font = "800 31px Inter, sans-serif";
+    ctx.font = "800 31px system-ui, sans-serif";
     ctx.fillText(mode === "won" ? "Maze Clear" : mode === "over" ? "Game Over" : "Pixel Maze", width / 2, 198);
     ctx.fillStyle = "#6d6178";
-    ctx.font = "700 14px Inter, sans-serif";
+    ctx.font = "700 14px system-ui, sans-serif";
     ctx.fillText(mode === "idle" ? "Start or choose a direction" : `Score ${score}`, width / 2, 230);
   };
 

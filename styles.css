@@ -39,7 +39,7 @@ body {
   min-height: 100%;
   margin: 0;
   color: var(--text);
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
     linear-gradient(115deg, rgba(255, 193, 214, 0.72), transparent 30%),
     linear-gradient(145deg, rgba(143, 216, 255, 0.72), transparent 48%),
@@ -323,17 +323,6 @@ body.is-ready .site-shell {
   background: rgba(255, 255, 255, 0.82);
   cursor: pointer;
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
-}
-
-.header-actions .header-resume-link {
-  display: inline-flex;
-  width: auto;
-  min-width: 86px;
-  padding: 0 14px;
-  color: var(--sky-ink);
-  font-size: 0.86rem;
-  font-weight: 800;
-  text-decoration: none;
 }
 
 .header-actions a:hover,
@@ -923,11 +912,18 @@ body.is-ready .site-shell {
   gap: 9px;
 }
 
-.badge-list img {
-  display: block;
-  height: 24px;
-  max-width: 100%;
-  object-fit: contain;
+.badge-list span {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  padding: 3px 9px;
+  border: 1px solid rgba(91, 70, 122, 0.14);
+  border-radius: 6px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.76);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 .resume-layout {
@@ -1015,7 +1011,6 @@ body.is-ready .site-shell {
   margin: 0 0 18px;
 }
 
-.resume-download,
 .resume-actions .btn {
   width: fit-content;
 }
@@ -1073,6 +1068,9 @@ body.is-ready .site-shell {
 
 .contact-aside a {
   overflow-wrap: anywhere;
+}
+
+.contact-aside a {
   text-decoration: none;
 }
 
@@ -1506,12 +1504,6 @@ body.is-ready .site-shell {
     height: 44px;
   }
 
-  .header-actions .header-resume-link {
-    width: auto;
-    min-width: 78px;
-    padding: 0 10px;
-  }
-
   .header-actions button {
     width: 44px;
     height: 44px;
@@ -1618,13 +1610,6 @@ body.is-ready .site-shell {
     height: 38px;
   }
 
-  .header-actions .header-resume-link {
-    min-width: 64px;
-    height: 38px;
-    padding: 0 8px;
-    font-size: 0.78rem;
-  }
-
   .header-actions svg {
     width: 18px;
     height: 18px;
@@ -1688,8 +1673,9 @@ body.is-ready .site-shell {
     justify-content: center;
   }
 
-  .badge-list img {
-    height: 22px;
+  .badge-list span {
+    min-height: 22px;
+    max-width: 100%;
   }
 
   .skill-cloud span {

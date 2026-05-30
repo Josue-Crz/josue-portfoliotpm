@@ -22,12 +22,12 @@ const mazeSoundButton = document.querySelector("[data-maze-sound]");
 const mazeScore = document.querySelector("[data-maze-score]");
 const mazeLives = document.querySelector("[data-maze-lives]");
 const mazeDirectionButtons = [...document.querySelectorAll("[data-maze-dir]")];
-const scrollSections = [
-  ...document.querySelectorAll(".hero-section, .section-band, .page-intro, .resume-panel"),
-];
-const projectSection = document.querySelector(".section-band--project");
-
-const getSectionTitle = (section) => section.querySelector("h1, h2");
+const projectViewport = document.querySelector("[data-project-viewport]");
+const projectCards = [...document.querySelectorAll("[data-project-card]")];
+const projectPrevButton = document.querySelector("[data-project-prev]");
+const projectNextButton = document.querySelector("[data-project-next]");
+const projectCurrent = document.querySelector("[data-project-current]");
+const projectTotal = document.querySelector("[data-project-total]");
 
 const animateFavicon = () => {
   if (!favicon) {
@@ -46,92 +46,98 @@ const animateFavicon = () => {
   }, 120);
 };
 
-scrollSections.forEach((section) => {
-  section.classList.add("scroll-reveal-section");
-  getSectionTitle(section)?.classList.add("scroll-reveal-title");
-});
+let activeProjectIndex = 0;
+let projectScrollFrame = 0;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-const triggerSectionHighlight = (section) => {
-  const title = getSectionTitle(section);
-
-  section.classList.add("is-section-visible");
-
-  if (section === projectSection) {
+const updateProjectMeta = () => {
+  if (projectCards.length === 0) {
     return;
   }
 
-  if (!title || title.dataset.highlighting === "true") {
-    return;
+  projectCards.forEach((card, index) => {
+    card.toggleAttribute("aria-current", index === activeProjectIndex);
+  });
+
+  if (projectCurrent) {
+    projectCurrent.textContent = String(activeProjectIndex + 1).padStart(2, "0");
   }
-
-  title.dataset.highlighting = "true";
-  title.classList.remove("is-scroll-highlight");
-  void title.offsetWidth;
-  title.classList.add("is-scroll-highlight");
-
-  window.setTimeout(() => {
-    title.classList.remove("is-scroll-highlight");
-    title.dataset.highlighting = "false";
-  }, 2800);
 };
 
-const scrollObserver = "IntersectionObserver" in window
-  ? new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            triggerSectionHighlight(entry.target);
-          }
-        });
-      },
-      {
-        rootMargin: "-14% 0px -46% 0px",
-        threshold: 0.18,
-      },
-    )
-  : null;
-
-if (scrollObserver) {
-  scrollSections.forEach((section) => scrollObserver.observe(section));
-} else {
-  scrollSections.forEach(triggerSectionHighlight);
-}
-
-const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-
-const updateProjectSectionOpacity = () => {
-  if (!projectSection) {
+const scrollProjectIntoView = (behavior = "smooth") => {
+  if (!projectViewport || projectCards.length === 0) {
     return;
   }
 
-  const rect = projectSection.getBoundingClientRect();
-  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-  const fadeStart = viewportHeight * 0.9;
-  const fadeEnd = viewportHeight * 0.34;
-  const progress = clamp((fadeStart - rect.top) / (fadeStart - fadeEnd), 0, 1);
-  const sectionOpacity = 0.84 + progress * 0.16;
-  const titleOpacity = 0.88 + progress * 0.12;
+  const viewportWidth = projectViewport.clientWidth;
 
-  projectSection.style.setProperty("--project-section-opacity", sectionOpacity.toFixed(3));
-  projectSection.style.setProperty("--project-title-opacity", titleOpacity.toFixed(3));
-};
-
-let projectOpacityFrame = 0;
-
-const queueProjectSectionOpacity = () => {
-  if (projectOpacityFrame) {
+  if (!viewportWidth) {
     return;
   }
 
-  projectOpacityFrame = window.requestAnimationFrame(() => {
-    projectOpacityFrame = 0;
-    updateProjectSectionOpacity();
+  projectViewport.scrollTo({
+    left: activeProjectIndex * viewportWidth,
+    behavior: prefersReducedMotion.matches ? "auto" : behavior,
   });
 };
 
-updateProjectSectionOpacity();
-window.addEventListener("scroll", queueProjectSectionOpacity, { passive: true });
-window.addEventListener("resize", queueProjectSectionOpacity);
+const setProjectIndex = (index, shouldScroll = true) => {
+  if (projectCards.length === 0) {
+    return;
+  }
+
+  activeProjectIndex = (index + projectCards.length) % projectCards.length;
+  updateProjectMeta();
+
+  if (shouldScroll) {
+    scrollProjectIntoView();
+  }
+};
+
+const moveProjectWheel = (direction) => {
+  setProjectIndex(activeProjectIndex + direction);
+};
+
+if (projectTotal) {
+  projectTotal.textContent = String(projectCards.length).padStart(2, "0");
+}
+
+projectPrevButton?.addEventListener("click", () => moveProjectWheel(-1));
+projectNextButton?.addEventListener("click", () => moveProjectWheel(1));
+
+projectViewport?.addEventListener("scroll", () => {
+  if (projectScrollFrame) {
+    return;
+  }
+
+  projectScrollFrame = window.requestAnimationFrame(() => {
+    projectScrollFrame = 0;
+    const viewportWidth = projectViewport.clientWidth;
+
+    if (!viewportWidth) {
+      return;
+    }
+
+    const nextIndex = Math.round(projectViewport.scrollLeft / viewportWidth);
+    setProjectIndex(nextIndex, false);
+  });
+}, { passive: true });
+
+projectViewport?.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    moveProjectWheel(-1);
+  }
+
+  if (event.key === "ArrowRight") {
+    event.preventDefault();
+    moveProjectWheel(1);
+  }
+});
+
+window.addEventListener("resize", () => scrollProjectIntoView("auto"));
+
+updateProjectMeta();
 
 const showTab = (tabName, shouldFocus = false) => {
   tabs.forEach((tab) => {
@@ -154,12 +160,6 @@ const showTab = (tabName, shouldFocus = false) => {
     history.replaceState(null, "", `#${tabName}`);
   }
 
-  const activePanel = panels.find((panel) => panel.dataset.panel === tabName);
-  const firstSection = activePanel?.querySelector(".page-intro, .hero-section");
-
-  if (firstSection) {
-    window.setTimeout(() => triggerSectionHighlight(firstSection), 120);
-  }
 };
 
 const validTabs = new Set(tabs.map((tab) => tab.dataset.tab));

@@ -1,6 +1,6 @@
 # Josue Cruz Technical Product Portfolio
 
-A static portfolio website for Josue Cruz, a Computer Science student at San Francisco State University focused on technical program management, open-source collaboration, security-minded development, and IoT/full-stack product work.
+A static portfolio website for Josue Cruz, a Computer Science student at San Francisco State University focused on startup internships, open-source development, AI accessibility work, and IoT/full-stack prototypes.
 
 Built with `HTML5`, `CSS3`, and `JavaScript`.
 
@@ -10,10 +10,10 @@ This site is a single-page portfolio with tabbed sections for home, blogs, resum
 
 The portfolio highlights:
 
-- TPM and product positioning for internships and product-adjacent engineering roles.
-- Selected projects: GreenSense, Dogs2Home, Keyshade.io input field sanitation, and CouchMunch.
+- Startup internship positioning for software, AI, embedded systems, and IoT roles.
+- Selected projects: Smart Cane, CouchMunch, Dogs2Home, GreenSense, and Keyshade.io input field sanitation.
 - Open-source blog posts based on real issues and pull requests.
-- Resume content, direct contact links, contact preferences, social links, and two small canvas mini games.
+- Resume content, direct contact links, social links, a rotating project carousel, and two small canvas mini games.
 - Scroll-triggered section highlighting and responsive card layouts.
 
 ## File Structure
@@ -26,7 +26,6 @@ The portfolio highlights:
 +-- assets/
 |   +-- Flappy_Bird_icon.png
 |   +-- Josue_Cruz_Headshot.png
-|   +-- product-management-preview.svg
 +-- README.md
 +-- LICENSE
 ```
@@ -45,7 +44,7 @@ Then visit `http://localhost:8000`.
 
 ## Main Sections
 
-- `Home`: profile summary, about section, selected projects, tech stack, and product operating principles.
+- `Home`: profile summary, about section, selected projects, tech stack, and startup build principles.
 - `Blogs`: writeups for John the Ripper issue/PR work and Keyshade.io input field sanitation.
 - `Resume`: education, skills, experience, certifications, and profile links.
 - `Contact`: email-first direct links, LinkedIn, GitHub, and website links.

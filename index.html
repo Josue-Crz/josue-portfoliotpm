@@ -284,7 +284,7 @@
                     <span class="project-card__tag">Cloud / Hackathon / Pet Tech</span>
                     <h3>Dogs2Home</h3>
                     <p>
-                      Built a Hack Hayward 2.0 proof-of-concept pet monitoring platform inspired by home security
+                      Built a Hack Hayward 2.0 proof-of-concept pet monitoring platform inspired by home monitoring
                       dashboards, focused on real-time event logging, telemetry, and user-facing cloud updates.
                     </p>
                     <ul>
@@ -333,15 +333,15 @@
                   </article>
 
                   <article class="project-card" data-project-card>
-                    <span class="project-card__tag">Open Source / TypeScript / App Security</span>
-                    <h3>Keyshade.io Input Field Sanitation</h3>
+                    <span class="project-card__tag">Open Source / TypeScript / App Reliability</span>
+                    <h3>Keyshade.io Input Validation</h3>
                     <p>
                       Collaborated with open-source contributors to strengthen input validation in Keyshade, a
                       configuration management platform built with Nest.js and Next.js.
                     </p>
                     <ul>
-                      <li>Implemented reusable TypeScript and Zod validation schemas for safer user input handling.</li>
-                      <li>Improved data integrity and reduced risk around untrusted text moving through shared request shapes.</li>
+                      <li>Implemented reusable TypeScript and Zod validation schemas for consistent text handling.</li>
+                      <li>Improved data integrity across shared request shapes and naming workflows.</li>
                       <li>Contributed through pull requests, code reviews, and technical discussion in a professional codebase.</li>
                     </ul>
                     <div class="badge-list" aria-label="Keyshade technologies">
@@ -455,7 +455,7 @@
             <p class="eyebrow">Writing</p>
             <h1>Open-source notes from real issues and pull requests.</h1>
             <p>
-              Two technical writeups on security, maintainability, maintainer communication, and what I learned while
+              Two technical writeups on maintainability, contributor communication, and what I learned while
               contributing to production open-source projects.
             </p>
           </div>
@@ -506,7 +506,7 @@
                 <ul>
                   <li>Issue: long C/header source lines needed consistent treatment.</li>
                   <li>Draft PR: split OpenBSD-SoftRAID test vectors using adjacent string literals.</li>
-                  <li>Lesson: in a mature security tool, "just formatting" still needs technical discipline.</li>
+                  <li>Lesson: in a mature C project, "just formatting" still needs technical discipline.</li>
                 </ul>
                 <p class="blog-card__links">
                   <a href="https://github.com/openwall/john/issues/3896" target="_blank" rel="noopener noreferrer">
@@ -519,31 +519,29 @@
               </div>
             </article>
             <article class="blog-card">
-              <p class="blog-card__meta">Feb 2026 / Security & Full Stack</p>
+              <p class="blog-card__meta">Feb 2026 / Full Stack</p>
               <div class="blog-card__content">
                 <h2>
                   <a href="https://github.com/Josue-Crz/keyshade-team-F-fork/pull/8" target="_blank" rel="noopener noreferrer">
-                    Hardening Keyshade.io Through Input Field Sanitation
+                    Improving Keyshade.io Through Shared Input Validation
                   </a>
                 </h2>
                 <p>
-                  Keyshade.io is an open-source configuration management platform. Because it helps teams
-                  protect deployment settings and application configuration, the inputs around projects,
-                  environments, variables, and users have to be handled carefully. Our CodeDay team worked on
-                  strengthening that front gate: the point where user-controlled text first enters the system.
+                  Keyshade.io is an open-source configuration management platform. Our CodeDay team worked on
+                  making project, environment, variable, and user text easier to validate consistently across the
+                  application.
                 </p>
-                <h3>The security problem</h3>
+                <h3>The consistency problem</h3>
                 <p>
-                  The issue was not encryption itself. It was the input path around the application. If unicode,
-                  emojis, script-like strings, or unexpected special characters are accepted too freely, they can create
-                  broken slugs, unsafe requests, confusing UI states, or validation gaps between frontend and backend
-                  behavior. These are the same kinds of trust-boundary weaknesses that make XSS and malformed-input
-                  bugs possible. In a configuration platform, even small validation mistakes deserve attention.
+                  The work focused on how text entered through UI components became request payloads. When unicode,
+                  emojis, or unexpected special characters are accepted too loosely, names and slugs can become
+                  inconsistent across the product. In a configuration platform, consistent naming and validation are
+                  part of making the experience predictable.
                 </p>
                 <h3>Where I investigated</h3>
                 <p>
                   I focused on the platform side first and looked for component entry points where user-provided text
-                  moved into request helpers. That led to authentication and integration flows, plus reusable
+                  moved into request helpers. That led to account and integration flows, plus reusable
                   validation helpers that connected individual components to shared validation logic.
                 </p>
                 <h3>The schema-driven solution</h3>
@@ -556,9 +554,8 @@
                 </p>
                 <p>
                   On the frontend, the project creation flow used schema parsing before sending a request, showing a
-                  toast when a project name was not alphanumeric or was empty. The larger security idea was defense in
-                  depth: frontend validation improves feedback, while backend validation still needs to reject unsafe
-                  input because browser-side checks can be bypassed.
+                  toast when a project name was not alphanumeric or was empty. The larger product idea was consistency:
+                  shared validation improves feedback and keeps request shapes aligned across the app.
                 </p>
                 <h3>Collaboration and coordination</h3>
                 <p>
@@ -570,7 +567,7 @@
                 <ul>
                   <li>Issue: user input needed stricter alphanumeric validation.</li>
                   <li>Solution: shared Zod schemas with safe parsing before data moved deeper into the app.</li>
-                  <li>Lesson: security work is also coordination work when multiple contributors touch shared contracts.</li>
+                  <li>Lesson: validation work is also coordination work when multiple contributors touch shared contracts.</li>
                 </ul>
                 <p class="blog-card__links">
                   <a href="https://github.com/keyshade-xyz/keyshade/pull/1278" target="_blank" rel="noopener noreferrer">
@@ -578,9 +575,6 @@
                   </a>
                   <a href="https://github.com/keyshade-xyz/keyshade/issues/929" target="_blank" rel="noopener noreferrer">
                     Related Issue #929
-                  </a>
-                  <a href="https://docs.google.com/document/d/12Ac3wVEF5NnSmktKgqOOgm5CtTcIoS5psyk4UJSIStE/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    Full project notes (Google Doc)
                   </a>
                 </p>
               </div>

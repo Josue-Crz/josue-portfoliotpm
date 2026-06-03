@@ -52,3 +52,5 @@ Then visit `http://localhost:8000`.
 ## Assets
 
 Local assets live in `assets/`. The site uses remote Shields.io badges for programming languages, frameworks, tools, and project technologies.
+
+# Bottom of Page

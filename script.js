@@ -166,7 +166,10 @@ const validTabs = new Set(tabs.map((tab) => tab.dataset.tab));
 const initialTab = window.location.hash.replace("#", "");
 
 tabs.forEach((tab) => {
-  tab.addEventListener("click", () => showTab(tab.dataset.tab, true));
+  tab.addEventListener("click", () => {
+    showTab(tab.dataset.tab, true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
 
 tabLinks.forEach((link) => {
@@ -1220,7 +1223,15 @@ window.addEventListener("hashchange", () => {
   }
 });
 
-window.addEventListener("load", () => {
+let hasInitializedSite = false;
+
+const initializeSite = () => {
+  if (hasInitializedSite) {
+    return;
+  }
+
+  hasInitializedSite = true;
+
   if (validTabs.has(initialTab)) {
     showTab(initialTab);
   }
@@ -1231,6 +1242,17 @@ window.addEventListener("load", () => {
 
   window.setTimeout(() => {
     document.body.classList.add("is-ready");
-    loader?.classList.add("is-hidden");
+    if (loader) {
+      loader.classList.add("is-hidden");
+      loader.hidden = true;
+    }
   }, 850);
-});
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeSite, { once: true });
+} else {
+  initializeSite();
+}
+
+window.addEventListener("load", initializeSite, { once: true });

@@ -188,7 +188,7 @@ body.is-ready .site-shell {
   grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
   gap: 16px;
   align-items: center;
-  margin: 0 0 38px;
+  margin: 0 0 22px;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -347,13 +347,17 @@ body.is-ready .site-shell {
   animation: panelIn 360ms ease both;
 }
 
+.tab-panel:focus {
+  outline: none;
+}
+
 .hero-section {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
   gap: 34px;
   align-items: center;
-  min-height: 620px;
-  padding: 42px 0 72px;
+  min-height: 560px;
+  padding: 18px 0 56px;
 }
 
 .hero-copy h1,
@@ -365,9 +369,10 @@ body.is-ready .site-shell {
   font-weight: 800;
 }
 
-.hero-copy h1 {
+.hero-copy h1,
+.page-intro h1 {
   max-width: 760px;
-  font-size: 3.85rem;
+  font-size: 3.15rem;
   color: var(--text);
 }
 
@@ -949,8 +954,8 @@ body.is-ready .site-shell {
 }
 
 .page-intro {
-  min-height: 310px;
-  padding: 70px 0 36px;
+  min-height: 240px;
+  padding: 28px 0 30px;
 }
 
 .blog-list {
@@ -1541,12 +1546,17 @@ body.is-ready .site-shell {
   .hero-section {
     grid-template-columns: 1fr;
     min-height: 0;
-    padding-top: 28px;
+    padding-top: 10px;
   }
 
   .hero-copy h1,
   .page-intro h1 {
     font-size: 3.4rem;
+  }
+
+  .hero-copy h1,
+  .page-intro h1 {
+    font-size: 2.95rem;
   }
 
   .case-grid,
@@ -1582,7 +1592,7 @@ body.is-ready .site-shell {
   }
 
   .site-header {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
     gap: 10px;
     padding: 8px;
   }
@@ -1611,6 +1621,11 @@ body.is-ready .site-shell {
     line-height: 1.02;
   }
 
+  .hero-copy h1,
+  .page-intro h1 {
+    font-size: 2.05rem;
+  }
+
   .hero-copy__lead,
   .page-intro p {
     font-size: 1rem;
@@ -1618,7 +1633,7 @@ body.is-ready .site-shell {
 
   .hero-section {
     gap: 24px;
-    padding-bottom: 44px;
+    padding-bottom: 34px;
   }
 
   .hero-actions {
@@ -1683,8 +1698,8 @@ body.is-ready .site-shell {
   }
 
   .page-intro {
-    min-height: 250px;
-    padding-top: 44px;
+    min-height: 190px;
+    padding-top: 22px;
   }
 
   .site-footer {
@@ -1745,13 +1760,18 @@ body.is-ready .site-shell {
     font-size: 2.22rem;
   }
 
+  .hero-copy h1,
+  .page-intro h1 {
+    font-size: 1.95rem;
+  }
+
   .section-band {
     padding: 48px 0;
   }
 
   .page-intro {
     min-height: 0;
-    padding: 38px 0 30px;
+    padding: 18px 0 26px;
   }
 
   .signal-grid div,
@@ -1832,6 +1852,11 @@ body.is-ready .site-shell {
   .hero-copy h1,
   .page-intro h1 {
     font-size: 2.15rem;
+  }
+
+  .hero-copy h1,
+  .page-intro h1 {
+    font-size: 1.88rem;
   }
 
   .tab {

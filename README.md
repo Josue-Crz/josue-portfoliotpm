@@ -11,9 +11,9 @@ This site is a single-page portfolio with tabbed sections for home, blogs, resum
 The portfolio highlights:
 
 - Startup internship positioning for software, AI, embedded systems, and IoT roles.
-- Selected projects: Smart Cane, CouchMunch, Dogs2Home, GreenSense, and Keyshade.io input field sanitation.
+- Selected projects: Smart Cane, CouchMunch, Dogs2Home, GreenSense, and Keyshade.io shared Zod validation.
 - Open-source blog posts based on real issues and pull requests.
-- Resume content, direct contact links, social links, a rotating project carousel, and two small canvas mini games.
+- Resume content, external resume viewing, certifications, direct contact links, social links, a rotating project carousel, and two small canvas mini games.
 - Scroll-triggered section highlighting and responsive card layouts.
 
 ## File Structure
@@ -45,12 +45,12 @@ Then visit `http://localhost:8000`.
 ## Main Sections
 
 - `Home`: profile summary, about section, selected projects, tech stack, and startup build principles.
-- `Blogs`: writeups for John the Ripper issue/PR work and Keyshade.io input field sanitation.
-- `Resume`: education, skills, experience, certifications, and profile links.
+- `Blogs`: writeups for John the Ripper issue/PR work and Keyshade.io shared validation.
+- `Resume`: education, skills, experience, certifications, external resume viewing, and profile links.
 - `Contact`: email-first direct links, LinkedIn, GitHub, and website links.
 
 ## Assets
 
-Local assets live in `assets/`. The site uses remote Shields.io badges for programming languages, frameworks, tools, and project technologies.
+Local assets live in `assets/`. Resume viewing happens through an external link.
 
 # Bottom of Page

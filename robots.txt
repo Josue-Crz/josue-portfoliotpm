@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cruzbuilt.codes/sitemap.xml
+Sitemap: https://josue-crz.github.io/josue-portfoliotpm/sitemap.xml
